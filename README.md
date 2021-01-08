@@ -1,2 +1,36 @@
 # OOPIII_Oplossingen
+
 Oplossingen van het olod OOPIII
+
+## Inhoud
+
+### H16 Collections
+
+- [ ] OOPIII_Col_lab_Garage
+
+### H17 Lambda's en streams
+
+- [ ]  OOPIII_LAM_lab_Bier
+- [ ] OOPIII_LAM_lab_Vliegmij
+
+### H20 Generiek programmeren
+
+- [ ] OOPIII_DAT_MyList_generiek
+
+### H23 MultiThreading
+
+- [ ] OOPIII_MUL_lab_Teller
+
+### H28 Netwerkprogrammatie
+
+- [ ] OOPIII_NET_lab_TCP_FileTransfer_Server
+- [ ] OOPIII_NET_lab_TCP_FX_FileTransfer_Client
+- [ ] OOPIII_NET_UDPPinger
+
+### H29 JPA
+
+- [ ] OOPIII_JPA_lab_Garage
+
+### Voorbeeldexamen
+
+- [ ] EX_OOPIII_1516_Herex
