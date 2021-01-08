@@ -16,7 +16,7 @@ Het is mogelijk dat er fouten in de oplossing staan. Moest je een fout vinden la
 
 ### H20 Generiek programmeren
 
-- [ ] OOPIII_DAT_MyList_generiek
+- [x] [OOPIII_DAT_MyList_generiek](/OOPIII_DAT_MyList_generiek_start)
 
 ### H23 MultiThreading
 
