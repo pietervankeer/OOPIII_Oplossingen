@@ -1,12 +1,14 @@
 package domein;
 
 import exceptions.EmptyListException;
+
+import java.io.Serializable;
 import java.util.Iterator;
 
-public class MyListIterable implements Iterable {
+public class MyListIterable<T extends Serializable> implements Iterable<T>, Serializable {
     
-    private Node  firstNode;
-    private Node lastNode;
+    private Node<T>  firstNode;
+    private Node<T> lastNode;
     private String nameList;
 
     public MyListIterable() {
@@ -34,8 +36,8 @@ public class MyListIterable implements Iterable {
         return buffer.toString();
     }
 
-    public void insertAtFront(String data) {
-        Node aNode = new Node(data);
+    public void insertAtFront(T data) {
+        Node<T> aNode = new Node<T>(data);
         if (isEmpty()) {
             firstNode = lastNode = aNode;
         } else {
@@ -44,22 +46,22 @@ public class MyListIterable implements Iterable {
         }
     }
 
-    public void insertAtBack(String data) {
-        Node aNode = new Node(data);
+    public void insertAtBack(T data) {
+        Node<T> aNode = new Node<T>(data);
         if (isEmpty()) {
             firstNode = lastNode = aNode;
         } else {
             lastNode.setNext(aNode);
-            lastNode = lastNode.getNext();
+            lastNode = (Node<T>) lastNode.getNext();
         }
     }
 
-    public String removeFromFront() throws EmptyListException {
+    public T removeFromFront() throws EmptyListException {
         if (isEmpty()) {
             throw new EmptyListException(nameList);
         }
 
-        String removedItem = firstNode.getData();
+        T removedItem = firstNode.getData();
         if (firstNode == lastNode) {
             firstNode = lastNode = null;
         } else {
@@ -70,21 +72,21 @@ public class MyListIterable implements Iterable {
     }
 
     @Override
-    public Iterator iterator() {
+    public Iterator<T> iterator() {
         return new MyIterator();
     }
    
-    private class MyIterator implements Iterator {
+    private class MyIterator implements Iterator<T> {
         
-        private Node current = MyListIterable.this.firstNode;
+        private Node<T> current = MyListIterable.this.firstNode;
 
         @Override
         public boolean hasNext() {return current != null;
         }
 
         @Override
-        public String next() {
-            String data = current.getData();
+        public T next() {
+            T data = current.getData();
             current = current.getNext();
             return data; 
         }

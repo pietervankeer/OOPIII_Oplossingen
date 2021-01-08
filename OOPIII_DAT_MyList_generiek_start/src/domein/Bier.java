@@ -1,6 +1,8 @@
 package domein;
 
-public class Bier {
+import java.io.Serializable;
+
+public class Bier implements Serializable{
 
     private String bierNaam;
     private double alcohol;

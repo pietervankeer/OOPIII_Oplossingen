@@ -22,7 +22,7 @@ public class PersistentieController {
     }
      
     //TODO stap 3, maak de methode generiek
-    public void persisteerObject(Object object, File besnaam) {
+    public <T extends Serializable> void persisteerObject(T object, File besnaam) {
         try (ObjectOutputStream out = new ObjectOutputStream(Files.newOutputStream(besnaam.toPath()))) {
             out.writeObject(object);
         } catch (IOException ex) {

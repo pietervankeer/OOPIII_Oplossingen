@@ -23,11 +23,10 @@ public class TestStackGeneriek {
 		decGetallenStack = new MyStack<>("decimaleGetallenStack");
 	}
 
-	//----------------------------------------------------------------------------
+	// ----------------------------------------------------------------------------
 	// STAP2
-	/*@Test
-	public void woordenToevoegenVerwijderen() 
-	{
+	@Test
+	public void woordenToevoegenVerwijderen() {
 		woordenStack.push("lekker");
 		woordenStack.push("zijn");
 		woordenStack.push("wafels");
@@ -42,8 +41,7 @@ public class TestStackGeneriek {
 	}
 
 	@Test
-	public void decGetallenToevoegenVerwijderen() 
-	{
+	public void decGetallenToevoegenVerwijderen() {
 		decGetallenStack.push(12.5);
 		decGetallenStack.push(24.3);
 		decGetallenStack.push(30.5);
@@ -58,21 +56,30 @@ public class TestStackGeneriek {
 
 		Assertions.assertEquals(12.5, decGetallenStack.pop(), 0.0);
 		Assertions.assertTrue(decGetallenStack.isEmpty());
-	}*/
+	}
 
 	@Test
-	public void toevoegenVerwijderenTesten()
-	{
-		String[] woorden = {"lekker", "zijn", "wafels"};
-		Double[] decGetallen = {12.5, 24.3, 30.5, 40.5};
+	public void toevoegenVerwijderenTesten() {
+		String[] woorden = { "lekker", "zijn", "wafels" };
+		Double[] decGetallen = { 12.5, 24.3, 30.5, 40.5 };
 		itemsToevoegenVerwijderen(woordenStack, woorden);
 		itemsToevoegenVerwijderen(decGetallenStack, decGetallen);
 	}
 
-	//public void itemsToevoegenVerwijderen(MyStack myStack,     items){
+	// public void itemsToevoegenVerwijderen(MyStack myStack, items){
 
-	//----------------------------------------------------------------------------
-	
+	// ----------------------------------------------------------------------------
+
+	private <T extends Serializable> void itemsToevoegenVerwijderen(MyStack<T> myStack, T[] arr) {
+		Arrays.stream(arr).forEach(myStack::push);
+
+		List<T> listExpected = Arrays.asList(arr);
+		Collections.reverse(listExpected);
+
+		listExpected.stream().forEach(expected -> Assertions.assertEquals(expected, myStack.pop()));
+
+	}
+
 	@Test
 	public void stackLeeg() {
 		Assertions.assertTrue(woordenStack.isEmpty());
