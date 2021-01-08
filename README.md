@@ -6,7 +6,7 @@ Oplossingen van het olod OOPIII
 
 ### H16 Collections
 
-- [ ] OOPIII_Col_lab_Garage
+- [x] OOPIII_Col_lab_Garage
 
 ### H17 Lambda's en streams
 
