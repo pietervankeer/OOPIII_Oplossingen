@@ -7,11 +7,11 @@ Het is mogelijk dat er fouten in de oplossing staan. Moest je een fout vinden la
 
 ### H16 Collections
 
-- [x] [OOPIII_Col_lab_Garage](OOPIII_Col_lab_Garage)
+- [x] [OOPIII_Col_lab_Garage](/OOPIII_COL_lab_Garage_start)
 
 ### H17 Lambda's en streams
 
-- [x] [OOPIII_LAM_lab_Bier](OOPIII_LAM_lab_Bier)
+- [x] [OOPIII_LAM_lab_Bier](OOPIII_LAM_lab_Bier_start)
 - [ ] OOPIII_LAM_lab_Vliegmij
 
 ### H20 Generiek programmeren
