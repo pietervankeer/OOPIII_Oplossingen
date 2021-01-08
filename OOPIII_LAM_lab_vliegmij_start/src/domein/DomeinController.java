@@ -20,28 +20,34 @@ public class DomeinController {
 	}
 
 	private String zetLijstOmNaarString(List<Vliegmaatschappij> lijst) {
-		return null;
+		return lijst.stream()
+				.map(Vliegmaatschappij::toString)
+				.collect(Collectors.joining("\n"));
 
 	}
 
 	public List<String> geefAlleAirlinesMetMinstensAantalPartners(int aantal) {
 		List<Vliegmaatschappij> selectie = vliegmijRepository.geefAlleAirlinesMetMinstensAantalPartners(aantal);
-		return null;
+		return selectie.stream()
+				.map(Vliegmaatschappij::toString)
+				.collect(Collectors.toList());
 	}
 
 	public String geefAirlinesAlfabetischGesorteerd() {
 		List<Vliegmaatschappij> lijst = vliegmijRepository.geefAirlinesAlfabetischGesorteerd();
-		return null;
+		return zetLijstOmNaarString(lijst);
 	}
 
 	public String geefAirlinesGesorteerdVolgensAantalPartners() {
 		List<Vliegmaatschappij> lijst = vliegmijRepository.geefAirlinesGesorteerdVolgensAantalPartners();
-		return null;
+		return zetLijstOmNaarString(lijst);
 	}
 
 	public String geefAirlinesAantalKeerPartner() {
 		Map<Vliegmaatschappij, Integer> map = vliegmijRepository.geefAirlinesAantalKeerPartner();
-		return null;
+		return map.entrySet().stream()
+				.map(entry -> String.format("%s is %d keer partner", entry.getKey(), entry.getValue()))
+				.collect(Collectors.joining("\n"));
 	}
 	
 	public String geefEersteAirlineStartendMet(String woord) {
