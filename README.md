@@ -12,7 +12,7 @@ Het is mogelijk dat er fouten in de oplossing staan. Moest je een fout vinden la
 ### H17 Lambda's en streams
 
 - [x] [OOPIII_LAM_lab_Bier](/OOPIII_LAM_lab_Bier_start)
-- [ ] OOPIII_LAM_lab_Vliegmij
+- [x] [OOPIII_LAM_lab_Vliegmij](/OOPIII_LAM_lab_vliegmij_start)
 
 ### H20 Generiek programmeren
 
