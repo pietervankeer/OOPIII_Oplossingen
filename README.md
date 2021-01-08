@@ -10,7 +10,7 @@ Oplossingen van het olod OOPIII
 
 ### H17 Lambda's en streams
 
-- [ ]  OOPIII_LAM_lab_Bier
+- [x] OOPIII_LAM_lab_Bier
 - [ ] OOPIII_LAM_lab_Vliegmij
 
 ### H20 Generiek programmeren
