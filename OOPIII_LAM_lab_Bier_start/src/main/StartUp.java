@@ -9,8 +9,8 @@ public class StartUp
     public static void main(String[] args)
     {
         DomeinController dc=new DomeinController();
-        new BierApplicatie(dc);
+        // new BierApplicatie(dc);
         
-        //new BierApplicatie2(dc);
+        new BierApplicatie2(dc);
     }
 }
