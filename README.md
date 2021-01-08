@@ -1,16 +1,17 @@
 # OOPIII_Oplossingen
 
-Oplossingen van het olod OOPIII
+Oplossingen van het olod OOPIII.
+Het is mogelijk dat er fouten in de oplossing staan. Moest je een fout vinden laat het met zeker weten.
 
 ## Inhoud
 
 ### H16 Collections
 
-- [x] OOPIII_Col_lab_Garage
+- [x] [OOPIII_Col_lab_Garage](/OOPIII_Col_lab_Garage)
 
 ### H17 Lambda's en streams
 
-- [x] OOPIII_LAM_lab_Bier
+- [x] [OOPIII_LAM_lab_Bier](/OOPIII_LAM_lab_Bier)
 - [ ] OOPIII_LAM_lab_Vliegmij
 
 ### H20 Generiek programmeren
