@@ -25,8 +25,8 @@ Oplossingen van het olod OOPIII.
 
 ### H28 Netwerkprogrammatie
 
-- [ ] [OOPIII_NET_lab_TCP_FileTransfer_Server](/OOPIII_NET_lab_TCP_FileTransfer_Server_Start)
-- [ ] OOPIII_NET_lab_TCP_FX_FileTransfer_Client
+- [x] [OOPIII_NET_lab_TCP_FileTransfer_Server](/OOPIII_NET_lab_TCP_FileTransfer_Server_Start)
+- [x] [OOPIII_NET_lab_TCP_FX_FileTransfer_Client](/OOPIII_NET_lab_TCP_FX_FileTransfer_Client_Start)
 - [ ] OOPIII_NET_UDPPinger
 
 ### H29 JPA
