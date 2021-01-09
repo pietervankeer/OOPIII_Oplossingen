@@ -21,7 +21,7 @@ Oplossingen van het olod OOPIII.
 
 ### H23 MultiThreading
 
-- [ ] OOPIII_MUL_lab_Teller
+- [x] [OOPIII_MUL_lab_Teller](/OOPIII_MUL_lab_Teller_start)
 
 ### H28 Netwerkprogrammatie
 
