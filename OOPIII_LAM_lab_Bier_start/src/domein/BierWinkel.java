@@ -48,7 +48,12 @@ public class BierWinkel {
 	 * naar laag, en bij gelijk aantal graden op naam (alfabetisch).
 	 */
 	public List<Bier> geefGeordendOpAlcoholGehalteEnNaam() {
-		return null;
+		Comparator<Bier> opNaam= Comparator.comparing(Bier::getNaam);
+		Comparator<Bier> opAlcohol = Comparator.comparing(Bier::getAlcoholgehalte);
+		
+		return bieren.stream()
+				.sorted(opAlcohol.thenComparing(opNaam).reversed())
+				.collect(Collectors.toList());
 
 	}
 
