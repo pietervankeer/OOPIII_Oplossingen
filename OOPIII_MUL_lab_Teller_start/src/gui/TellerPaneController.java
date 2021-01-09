@@ -29,7 +29,8 @@ public class TellerPaneController extends BorderPane {
         } catch (IOException ex) {
             throw new RuntimeException(ex);
         }
-//TODO        
+        
+        dc.addObserver((obs, oldV, newV) -> Platform.runLater(() -> labTeller.setText(newV.toString())));
         
 	}
 	
