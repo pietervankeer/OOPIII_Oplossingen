@@ -68,7 +68,13 @@ public class BierWinkel {
 	}
 
 	public Map<String, List<Bier>> opzettenOverzichtBierenPerSoort() {
-		return bieren.stream().collect(Collectors.groupingBy(Bier::getSoort));
+		return bieren.stream().collect(
+				Collectors.groupingBy(
+						Bier::getSoort,
+						TreeMap::new,
+						Collectors.toList()
+						)
+				);
 	}
 
 	public Map<String, Long> opzettenAantalBierenPerSoort() {
