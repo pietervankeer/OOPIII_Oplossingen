@@ -3,6 +3,7 @@ package domein;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 
 import persistentie.PersistentieController;
@@ -67,11 +68,16 @@ public class BierWinkel {
 	}
 
 	public Map<String, List<Bier>> opzettenOverzichtBierenPerSoort() {
-		return null;
+		return bieren.stream().collect(Collectors.groupingBy(Bier::getSoort));
 	}
 
 	public Map<String, Long> opzettenAantalBierenPerSoort() {
-		return null;
+		return bieren.stream().collect(
+				Collectors.groupingBy(
+						Bier::getSoort, 
+						TreeMap::new,
+						Collectors.counting()
+						));
 	}
 
 }
