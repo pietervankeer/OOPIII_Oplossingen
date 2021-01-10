@@ -2,5 +2,4 @@
 
 ## JPA
 
-  - Standaard zal het wachtwoord "root" gebruikt worden, pas dit aan als jij een ander wachtwoord gebruikt.
-  - De naam van de database is "voorbeeldexamendb"
+Dit project kan je niet runnen maar de klassen in het domein zijn wel omgevormd tot entiteiten.
