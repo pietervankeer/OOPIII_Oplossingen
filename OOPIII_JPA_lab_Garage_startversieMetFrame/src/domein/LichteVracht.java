@@ -1,9 +1,16 @@
 package domein;
 
-public class LichteVracht extends Vervoermiddel {
-    
-    private double massa;
+import javax.persistence.Entity;
 
+@Entity
+public class LichteVracht extends Vervoermiddel {
+	private static final long serialVersionUID = 1L;
+	
+	private double massa;
+
+    protected LichteVracht() {
+	}
+    
     public LichteVracht(double massa, String nummerplaat) {
         super(nummerplaat);
         this.massa = massa;
