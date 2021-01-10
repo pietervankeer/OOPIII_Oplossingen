@@ -1,6 +1,6 @@
 # OOPIII_Oplossingen
 
-Oplossingen van het olod OOPIII.
+Dit is een repo met mijn persoonlijke oplossingen van het olod OOPIII.
 
 > Het is mogelijk dat er fouten in de oplossing staan. Moest je een fout vinden laat het met zeker weten.
 
