@@ -35,4 +35,4 @@ Oplossingen van het olod OOPIII.
 
 ### Voorbeeldexamen
 
-- [ ] EX_OOPIII_1516_Herex
+- [ ] [EX_OOPIII_1516_Herex](/Ex_OOP3_1516_herex_start_vraag3_4)
