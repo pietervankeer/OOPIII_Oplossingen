@@ -2,6 +2,9 @@ package domein;
 
 import java.io.Serializable;
 
+
+
+
 public class Dier implements Serializable {
 
     private int nummer;

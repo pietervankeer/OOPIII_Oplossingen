@@ -2,5 +2,5 @@
 
 ## JPA
 
-  - Standaard zal het wachtwoord "root" gebruikt worden, pas dit aan als jij een ander wachtwoord gebruikt.
-  - De naam van de database is "voorbeeldexamendb"
+ De oplossing van JPA staat in een ander project
+ 	--> zie [OOPIII_EX_voorbeeldexamenJPA](/OOPIII_EX_voorbeeldexamenJPA)

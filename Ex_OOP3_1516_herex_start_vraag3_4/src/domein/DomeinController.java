@@ -1,6 +1,7 @@
 package domein;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class DomeinController {
 
@@ -50,13 +51,15 @@ public class DomeinController {
      *
      */
     public String maakOverzichtVolgensSoort() {
-  //TODO
-        return null;
+        return zoo.maakOverzichtVolgensSoort().entrySet().stream()
+        		.map(entry -> String.format("%s => %s", entry.getKey(), entry.getValue()))
+        		.collect(Collectors.joining("\n"));
     }
 
-    //private List<String> zetOmNaarLijstVanStrings(//Lijst...) {
-//TODO
-
-//    }
+    private <E> List<String> zetOmNaarLijstVanStrings(List<E> lijst) {
+    	return lijst.stream()
+    	.map(e -> e.toString())
+    	.collect(Collectors.toList());
+    }
 
 }

@@ -2,13 +2,17 @@ package domein;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Optional;
+import java.util.Map;
 import java.util.stream.Collectors;
+
 import persistentie.PersistentieController;
 
 public class Zoo {//DUMMY
 
+	public final String PERSISTENCE_UNIT_NAME = "JPA_details";
     private List<Verzorger> verzorgers;
     private List<Dier> dieren;
     private List<Gebouw> gebouwen;
@@ -24,29 +28,32 @@ public class Zoo {//DUMMY
      * dieren moet gesorteerd zijn op gewicht (laag naar hoog).
      */
     public List<Dier> geefDierenVanSoortMetNaam(String soortNaam) {
-//--
-        return Arrays.asList(new Dier(1, soortNaam, 50.0, new Soort(soortNaam)));
-//--
+        Comparator<Dier> opGewicht = Comparator.comparing(Dier::getGewicht);
         
-        //TODO
-        //return null;
-    }
+        return dieren.stream()
+        		.filter(d -> d.getSoort().getNaam().equals(soortNaam))
+        		.sorted(opGewicht)
+        		.collect(Collectors.toList());
+        }
 
     /*
      * Geeft het gemiddelde gewicht terug van alle dieren die verblijven in het gebouw met de
      * opgegeven naam. Geeft 0 terug indien er geen gebouw is met deze naam.
      */
     public double geefGemiddeldeGewichtVanDierenInGebouwMetNaam(String gebouwNaam) {
-//--
-        if (gebouwNaam.equals("Reptielen")) {
-            return 75.0;
-        } else {
-            return 5.0;
-        }
-
-//--
-        //TODO
-        //return 0;
+       Gebouw gebouw = gebouwen.stream()
+    		   .filter(g -> g.getNaam().equals(gebouwNaam))
+    		   .findFirst()
+    		   .orElse(null);
+       if(gebouw == null) {
+    	   return 0;
+       }
+       
+       return gebouw.getDieren().stream()
+    		   .mapToDouble(Dier::getGewicht)
+    		   .average()
+    		   .getAsDouble();
+       
     }
 
     /*
@@ -55,15 +62,19 @@ public class Zoo {//DUMMY
      */
     //--
     public List<String> geefNamenVanDierenVanVerzorgerMetNummer(int verzorgerNummer) {
-
-//--
-        if (verzorgerNummer == 1) {
-            return Arrays.asList("Kroky", "Happy");
-        } else {
-            return Arrays.asList("Alvin", "Floppy", "Fluffie");
-        }
-
-//-- 
+    	Verzorger optVerzorger = verzorgers.stream()
+        		.filter(v -> v.getNummer() == verzorgerNummer)
+        		.findFirst()
+        		.orElse(null);
+    	
+    	if(optVerzorger != null) {
+    		 return optVerzorger.getDieren().stream()
+    				 .map(Dier::getNaam)
+    				 .collect(Collectors.toList());
+    	}
+    	
+    	return new ArrayList<String>();
+    	
     }
 
 //    /*
@@ -88,4 +99,8 @@ public class Zoo {//DUMMY
     //TODO
     // TODO METHODE ....maakOverzichtVolgensSoort() ... hier uitschrijven
     //
+    public Map<Soort, List<Dier>> maakOverzichtVolgensSoort(){
+    	return dieren.stream()
+    			.collect(Collectors.groupingBy(Dier::getSoort));
+    }
 }

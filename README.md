@@ -35,4 +35,5 @@ Dit is een repo met mijn persoonlijke oplossingen van het olod OOPIII.
 
 ### Voorbeeldexamen
 
-- [ ] [EX_OOPIII_1516_Herex](/Ex_OOP3_1516_herex_start_vraag3_4)
+- [x] [EX_OOPIII_1516_Herex](/Ex_OOP3_1516_herex_start_vraag3_4)
+- [ ] [OOPIII_EX_voorbeeldexamenJPA](/OOPIII_EX_voorbeeldexamenJPA)
