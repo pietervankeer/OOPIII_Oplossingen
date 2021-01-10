@@ -31,7 +31,7 @@ Oplossingen van het olod OOPIII.
 
 ### H29 JPA
 
-- [ ] OOPIII_JPA_lab_Garage
+- [x] [OOPIII_JPA_lab_Garage](/OOPIII_JPA_lab_Garage_startversieMetFrame)
 
 ### Voorbeeldexamen
 
